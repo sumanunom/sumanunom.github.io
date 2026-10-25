@@ -60,6 +60,8 @@
   .card p { margin: 0 0 12px; color: var(--muted); }
   .card ul { margin: 0 0 14px; padding-left: 18px; }
   .card li { margin-bottom: 4px; }
+  .note { color: var(--muted); max-width: 640px; margin: -8px 0 20px; }
+  .card .org { margin: 0 0 12px; font-size: 14px; }
   .links { display: flex; gap: 14px; flex-wrap: wrap; font-weight: 600; font-size: 14px; }
 
   .job { display: grid; grid-template-columns: 150px 1fr; gap: 6px 24px; padding: 0 0 26px; }
@@ -84,7 +86,7 @@
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
+      <li><a href="#projects">Work</a></li>
       <li><a href="#experience">Experience</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
@@ -108,12 +110,12 @@
 <section id="about">
   <div class="wrap">
     <h2>About</h2>
-    <p>I'm a Laravel developer who has worked on e-commerce stores, a bank-facing loan valuation platform and a GST accounting system. I like backend problems: access control, approval workflows, payments, and making slow queries fast. I have independently launched two production web applications.</p>
+    <p>I'm a Laravel developer who has worked on e-commerce stores, a bank-facing loan valuation platform and a GST accounting system. I like backend problems: access control, approval workflows, payments, and making slow queries fast. At Primasoft I built and launched two e-commerce platforms.</p>
     <div class="stats">
       <div class="stat"><b>4.5 yrs</b><span>Professional experience</span></div>
       <div class="stat"><b>3</b><span>Companies</span></div>
-      <div class="stat"><b>2</b><span>Apps launched independently</span></div>
-      <div class="stat"><b>30 days</b><span>Notice period</span></div>
+      <div class="stat"><b>2</b><span>E-commerce platforms launched</span></div>
+      <div class="stat"><b>Immediate</b><span>Joining availability</span></div>
     </div>
   </div>
 </section>
@@ -141,40 +143,42 @@
 
 <section id="projects">
   <div class="wrap">
-    <h2>Projects</h2>
+    <h2>Selected work</h2>
+    <p class="note">Projects from my professional work. The code and screenshots are confidential, so I describe what I built and how. I'm happy to walk through any of them in an interview.</p>
     <div class="projects">
 
       <article class="card">
-        <h3>E-commerce platform with REST API</h3>
-        <p>Online store with admin panel, token-secured API and Redis-cached catalog.</p>
+        <h3>E-commerce platforms with REST API</h3>
+        <p class="org">Primasoft Technologies &middot; 2025 – 2026</p>
         <ul>
-          <li>Admin panel for inventory, product catalog and order management.</li>
-          <li>REST APIs with Laravel Sanctum: auth, product filters, cart and checkout.</li>
-          <li>Redis caching on catalog queries: <span class="todo">[X ms to Y ms]</span>.</li>
-          <li>Emails sent through Laravel Queues so checkout stays fast.</li>
+          <li>Two online stores, each with an admin panel for inventory, product catalog and order management.</li>
+          <li>Sanctum-secured REST APIs for auth, product filters, cart and checkout, documented and tested in Postman.</li>
+          <li>Redis caching for high-traffic catalog and filter queries, with cache invalidation when products change.</li>
+          <li>Transactional emails moved to Laravel Queues so checkout stays fast.</li>
         </ul>
-        <div class="chips" style="margin-bottom:14px"><span class="chip">Laravel</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">Sanctum</span></div>
-        <div class="links">
-          <a href="#" class="todo">Live site: add URL</a>
-          <a href="#" class="todo">GitHub: add URL</a>
-          <a href="#" class="todo">API docs: add URL</a>
-        </div>
+        <div class="chips"><span class="chip">Laravel</span><span class="chip">MySQL</span><span class="chip">Redis</span><span class="chip">Sanctum</span></div>
       </article>
 
       <article class="card">
-        <h3>Razorpay payments and tests <span class="todo">[in progress: update when done]</span></h3>
-        <p>Payment flow with server-side order creation, signature verification and webhooks, plus automated tests and CI.</p>
+        <h3>Loan valuation platform</h3>
+        <p class="org">5GX Global &middot; 2024 – 2025</p>
         <ul>
-          <li>Idempotent webhook handling for captured and failed payments.</li>
-          <li>Feature tests with Pest/PHPUnit, Docker setup, GitHub Actions pipeline.</li>
+          <li>Banks and verification agencies exchange documents and complete multi-step property appraisals in one place.</li>
+          <li>5-role approval hierarchy (Case Initiator, Site Engineer, Report Generator, Reviewer, Approver), replacing manual follow-ups.</li>
+          <li>REST APIs that send finalized reports into banks' core systems.</li>
+          <li>Recurring subscription billing with overdue notifications, and a ticketing module with SLA/TAT breach alerts.</li>
         </ul>
-        <div class="links"><a href="#" class="todo">GitHub: add URL</a></div>
+        <div class="chips"><span class="chip">REST APIs</span><span class="chip">Role-based access</span><span class="chip">Approval workflow</span></div>
       </article>
 
       <article class="card">
-        <h3>GST invoicing app <span class="todo">[optional: remove if not built]</span></h3>
-        <p>Invoices with CGST/SGST/IGST calculation, PDF export and queued overdue reminders.</p>
-        <div class="links"><a href="#" class="todo">Live: add URL</a><a href="#" class="todo">GitHub: add URL</a></div>
+        <h3>Accounting and billing system</h3>
+        <p class="org">Axiom Consulting &middot; 2022 – 2024</p>
+        <ul>
+          <li>Automated GST calculation and quote generation.</li>
+          <li>Overdue receivables tracking and live profit dashboards.</li>
+        </ul>
+        <div class="chips"><span class="chip">GST</span><span class="chip">Billing</span><span class="chip">Dashboards</span></div>
       </article>
 
     </div>
@@ -186,13 +190,13 @@
     <h2>Experience</h2>
 
     <div class="job">
-      <div class="when">07/2025 – Present</div>
+      <div class="when">07/2025 – 10/2026</div>
       <div>
         <h3>Laravel Developer</h3><div class="co">Primasoft Technologies, Chennai</div>
         <ul>
           <li>Built and launched two e-commerce platforms with admin panels for inventory, catalog and orders.</li>
           <li>Developed Sanctum-secured REST APIs covering auth, user and admin management, filters, cart and checkout, tested in Postman.</li>
-          <li>Added Redis caching for high-volume catalog queries.</li>
+          <li>Added Redis caching for high-traffic catalog and filter queries, with cache invalidation when products are updated.</li>
           <li>Moved transactional emails to Laravel Queues and Mail.</li>
         </ul>
       </div>
@@ -204,7 +208,7 @@
         <h3>Software Engineer</h3><div class="co">5GX Global Private Limited, Chennai</div>
         <ul>
           <li>Built a loan valuation platform where banks and verification agencies exchange documents and complete property appraisals.</li>
-          <li>Implemented a 5-role approval hierarchy: Case Initiator, Site Engineer, Report Generator, Reviewer, Approver.</li>
+          <li>Implemented a 5-role approval hierarchy (Case Initiator, Site Engineer, Report Generator, Reviewer, Approver), replacing manual follow-ups between banks and agencies.</li>
           <li>Developed REST APIs that send finalized reports into banks' core systems.</li>
           <li>Built recurring subscription billing with overdue alerts and a ticketing module with SLA/TAT breach notifications.</li>
         </ul>
@@ -236,12 +240,12 @@
 <section id="contact">
   <div class="wrap contact">
     <h2>Contact</h2>
-    <p>I'm open to Laravel and backend roles and can join within 30 days. The quickest way to reach me is email.</p>
+    <p>I'm open to Laravel and backend roles and can join immediately. The quickest way to reach me is email.</p>
     <div class="row">
       <a class="btn primary" href="mailto:sumanunom@gmail.com">sumanunom@gmail.com</a>
       <a class="btn" href="tel:+917339219851">+91 73392 19851</a>
-      <a class="btn todo" href="#">LinkedIn: add URL</a>
-      <a class="btn todo" href="#">GitHub: add URL</a>
+      <a class="btn" href="https://www.linkedin.com/in/suman-r-developer" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/sumanunom" target="_blank" rel="noopener">GitHub</a>
     </div>
   </div>
 </section>
